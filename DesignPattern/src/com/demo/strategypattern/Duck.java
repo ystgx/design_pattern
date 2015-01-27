@@ -6,16 +6,10 @@ import com.demo.strategypattern.behavior.Quack;
 import com.demo.strategypattern.behavior.QuackBehavior;
 
 public abstract class Duck {
-	private FlyBehavior flyBehavior;
-	private QuackBehavior quackBehavior;
+	protected FlyBehavior flyBehavior;
+	protected QuackBehavior quackBehavior;
 	
-	public Duck(FlyBehavior flyBehavior, QuackBehavior quackBehavior) {
-		this.flyBehavior = flyBehavior;
-		this.quackBehavior = quackBehavior;
-	}
-	public Duck(){
-		this(new FlyNoWay(),new Quack());
-	}
+
 	abstract void display();
 	public void swim(){
 		System.out.println("I am swimming!");
@@ -25,5 +19,13 @@ public abstract class Duck {
 	}
 	public void performFly(){
 		flyBehavior.fly();
+	}
+	
+	public void setFlyBehavior(FlyBehavior fly){
+		this.flyBehavior = fly;
+	}
+	
+	public void setQuackBehavior(QuackBehavior quack){
+		this.quackBehavior = quack;
 	}
 }
