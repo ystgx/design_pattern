@@ -12,7 +12,7 @@ public class RedheadDuck extends Duck{
 		
 	
 	@Override
-	void display() {
+	public void display() {
 		System.out.println("我是一只红头鸭子~~~~");
 		
 	}
