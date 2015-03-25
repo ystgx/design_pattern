@@ -10,7 +10,7 @@ public abstract class Duck {
 	protected QuackBehavior quackBehavior;
 	
 
-	abstract public void display();
+	abstract void display();
 	public void swim(){
 		System.out.println("I am swimming!");
 	}
