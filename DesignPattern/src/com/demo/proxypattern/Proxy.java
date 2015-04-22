@@ -15,7 +15,12 @@ public class Proxy implements Subject {
 		
 	}
 
-	
+	@Override
+	public void doSometingMore() {
+		doBefore();
+		target.doSometingMore();
+		doAfter();
+	}
 	private void doBefore(){
 		System.out.println("In proxy do before");
 	}
@@ -27,5 +32,8 @@ public class Proxy implements Subject {
 	public static void main(String [] args){
 		Subject subject = new Proxy(new RealSubject());
 		subject.doSomething("hello");
+		subject.doSometingMore();
 	}
+
+
 }

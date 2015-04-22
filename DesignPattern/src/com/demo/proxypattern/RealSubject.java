@@ -8,4 +8,10 @@ public class RealSubject implements Subject {
 		System.out.println("In realsubject do  " + thing);
 	}
 
+	@Override
+	public void doSometingMore() {
+		System.out.println("In realsubject do something more " );
+		
+	}
+
 }
